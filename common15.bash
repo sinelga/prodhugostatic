@@ -115,22 +115,21 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=www.seksinovellit.biz
 bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.seksinovellit.biz
 
 
+#novellit.org
+#bin/newsite -locale=fi_FI -themes=porno -site=novellit.org -cssthemes=liquorice
+#bin/newsite -locale=fi_FI -themes=porno -site=www.novellit.org -cssthemes=liquorice
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.novellit.org -cssthemes=liquorice
 
-#novellit.biz
-#bin/newsite -locale=fi_FI -themes=porno -site=novellit.biz -cssthemes=liquorice
-#bin/newsite -locale=fi_FI -themes=porno -site=www.novellit.biz -cssthemes=liquorice
-#bin/newsite -locale=fi_FI -themes=porno -site=blog.novellit.biz -cssthemes=liquorice
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=novellit.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.novellit.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.novellit.org
 
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=novellit.biz
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.novellit.biz
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.novellit.biz
-
-hugo -s www/fi_FI/porno/novellit.biz
-hugo -s www/fi_FI/porno/www.novellit.biz
-hugo -s www/fi_FI/porno/blog.novellit.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=novellit.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=www.novellit.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.novellit.biz
+hugo -s www/fi_FI/porno/novellit.org
+hugo -s www/fi_FI/porno/www.novellit.org
+hugo -s www/fi_FI/porno/blog.novellit.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=novellit.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.novellit.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.novellit.org
 
 
 #novellit.net
