@@ -39,7 +39,7 @@ func main() {
 	parameters := strings.Split(string(content), ",")
 	startparameters = []string{strings.TrimSpace(parameters[0]), strings.TrimSpace(parameters[1]), strings.TrimSpace(parameters[2])}
 
-	for i := 0; i < 31; i++ {
+	for i := 0; i < 45; i++ {
 
 		paragraph := findfreeparagraph.FindFromQ(*golog, locale, themes, "google", startparameters)
 		paragraphs = append(paragraphs, paragraph)
