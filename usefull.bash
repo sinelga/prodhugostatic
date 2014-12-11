@@ -18,3 +18,4 @@ hugo -t hyde
 ???curl -I -d "sitemap=http://seuraa.co" http://www.google.com/webmaster/tools/ping
 
 find . | grep .git | xargs rm -rf
+find . | grep /.git$ | xargs rm -rf #more correct

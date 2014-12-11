@@ -137,10 +137,9 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 				golog.Err(err.Error())
 
 			}
-
 		}
 
-		srcFolder := "/home/juno/git/hugothemes/hugothemes/" + cssthemes
+		srcFolder := "/home/juno/git/prodhugothemes/" + cssthemes
 		destFolder := rootdirectory + "/themes"
 
 		cmd = exec.Command("ln", "-s", srcFolder, destFolder)
