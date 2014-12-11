@@ -14,7 +14,7 @@ import (
 
 func CreateNewSite(golog syslog.Writer, locale string, themes string, site string, cssthemes string, paragraphs []domains.Paragraph) {
 
-	rootdirectory := "/home/juno/git/hugostatic/hugostatic/www/" + locale + "/" + themes + "/" + site
+	rootdirectory := "/home/juno/git/prodhugostatic/www/" + locale + "/" + themes + "/" + site
 
 	if _, err := os.Stat(rootdirectory); os.IsNotExist(err) {
 
