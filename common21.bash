@@ -10,6 +10,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.alastonsuomi.info
 hugo -s www/fi_FI/porno/alastonsuomi.info
 hugo -s www/fi_FI/porno/www.alastonsuomi.info
 hugo -s www/fi_FI/porno/blog.alastonsuomi.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=alastonsuomi.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.alastonsuomi.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.alastonsuomi.info
 
 
 #alastonsuomi.mobi
@@ -24,6 +27,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.alastonsuomi.mobi
 hugo -s www/fi_FI/porno/alastonsuomi.mobi
 hugo -s www/fi_FI/porno/www.alastonsuomi.mobi
 hugo -s www/fi_FI/porno/blog.alastonsuomi.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=alastonsuomi.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.alastonsuomi.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.alastonsuomi.mobi
 
 
 #alastonsuomi.org
@@ -38,6 +44,10 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.alastonsuomi.org
 hugo -s www/fi_FI/porno/alastonsuomi.org
 hugo -s www/fi_FI/porno/www.alastonsuomi.org
 hugo -s www/fi_FI/porno/blog.alastonsuomi.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=alastonsuomi.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.alastonsuomi.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.alastonsuomi.org
+
 
 #naintia.com
 #bin/newsite -locale=fi_FI -themes=porno -site=naintia.com -cssthemes=hugoscroll
@@ -51,6 +61,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naintia.com
 hugo -s www/fi_FI/porno/naintia.com
 hugo -s www/fi_FI/porno/www.naintia.com
 hugo -s www/fi_FI/porno/blog.naintia.com
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naintia.com
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naintia.com
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naintia.com
 
 
 #naintia.net
@@ -65,6 +78,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naintia.net
 hugo -s www/fi_FI/porno/naintia.net
 hugo -s www/fi_FI/porno/www.naintia.net
 hugo -s www/fi_FI/porno/blog.naintia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naintia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naintia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naintia.net
 
 
 #naintia.info
@@ -79,6 +95,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naintia.info
 hugo -s www/fi_FI/porno/naintia.info
 hugo -s www/fi_FI/porno/www.naintia.info
 hugo -s www/fi_FI/porno/blog.naintia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naintia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naintia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naintia.info
 
 
 #naintia.org
@@ -93,7 +112,9 @@ bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naintia.org
 hugo -s www/fi_FI/porno/naintia.org
 hugo -s www/fi_FI/porno/www.naintia.org
 hugo -s www/fi_FI/porno/blog.naintia.org
-
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naintia.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naintia.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naintia.org
 
 
 

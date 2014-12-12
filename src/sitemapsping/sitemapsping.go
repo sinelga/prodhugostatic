@@ -68,7 +68,7 @@ func main() {
 
 func makeRobotstxt(locale string, themes string, site string) {
 
-	rootdirectory := "/home/juno/git/hugostatic/hugostatic/www/" + locale + "/" + themes + "/" + site
+	rootdirectory := "/home/juno/git/hugostatic/www/" + locale + "/" + themes + "/" + site
 	var buffer bytes.Buffer
 
 	filerobots, err := os.OpenFile(rootdirectory+"/public/robots.txt", os.O_RDWR|os.O_CREATE, 0660)
