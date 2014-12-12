@@ -57,6 +57,9 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 			Cssthemes:   cssthemes,
 			Description: description,
 			Keywords:    keywords,
+			Cover: "/images/background-cover.jpg",
+			Logojpg: "/images/logo.jpg",
+			Logopng: "/images/logo.png",
 		}
 
 		indexeshugo := domains.Indexeshugo{

@@ -11,22 +11,16 @@ type Paragraph struct {
 	Pushsite   string
 }
 
-
 type Menuparshugo struct {
-		
-	Name string `toml:"name"`
-	Url string `toml:"url"`
-	Weight int `toml:"weight"`
+	Name       string `toml:"name"`
+	Url        string `toml:"url"`
+	Weight     int    `toml:"weight"`
 	Identifier string `toml:"identifier"`
-			
 }
 
 type Menuhugo struct {
-	
 	Menu []Menuparshugo `toml:"main"`
-	
 }
-
 
 type Paramshugo struct {
 	Locale      string   `toml:"locale"`
@@ -35,11 +29,13 @@ type Paramshugo struct {
 	Cssthemes   string   `toml:"cssthemes"`
 	Description []string `toml:"description"`
 	Keywords    []string `toml:"keywords"`
+	Cover       string   `toml:"cover"`
+	Logojpg        string   `toml:"logojpg"`
+	Logopng		 string   `toml:"logopng"`
 }
 
 type Permalinkshugo struct {
 	Post string `toml:"post"`
-	
 }
 
 type Indexeshugo struct {
@@ -57,7 +53,7 @@ type Confighugo struct {
 	Indexes      Indexeshugo    `toml:"indexes"`
 	Permalinks   Permalinkshugo `toml:"permalinks"`
 	Params       Paramshugo     `toml:"params"`
-	Menu	Menuhugo `toml:"menu"`
+	Menu         Menuhugo       `toml:"menu"`
 }
 
 type Frontmatter struct {
@@ -69,4 +65,6 @@ type Frontmatter struct {
 	Descriptions []string `toml:"descriptions"`
 	Slug         string   `toml:"slug"`
 	Sentences    []string `toml:"sentences"`
+	Weight       int64    `toml:"weight"`
+//	Class        string   `toml:"class"`
 }
