@@ -9,6 +9,7 @@ import (
 	"log/syslog"
 	"strings"
 	"createsite"
+	"findkeywords"
 )
 
 
@@ -46,6 +47,9 @@ func main() {
 
 	}
 	
-	createsite.CreateNewSite(*golog,locale,themes,site,cssthemes,paragraphs)
+	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
+	
+	
+	createsite.CreateNewSite(*golog,locale,themes,site,cssthemes,paragraphs,keywords)
 			
 }

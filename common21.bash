@@ -1,4 +1,4 @@
-#alastonsuomi.info
+#alastonsuomi.info OK
 #bin/newsite -locale=fi_FI -themes=porno -site=alastonsuomi.info -cssthemes=simple-a
 #bin/newsite -locale=fi_FI -themes=porno -site=www.alastonsuomi.info -cssthemes=simple-a
 #bin/newsite -locale=fi_FI -themes=porno -site=blog.alastonsuomi.info  -cssthemes=simple-a
@@ -49,7 +49,7 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=www.alastonsuomi.org
 bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.alastonsuomi.org
 
 
-#naintia.com
+#naintia.com OK
 #bin/newsite -locale=fi_FI -themes=porno -site=naintia.com -cssthemes=hugoscroll
 #bin/newsite -locale=fi_FI -themes=porno -site=www.naintia.com -cssthemes=hugoscroll
 #bin/newsite -locale=fi_FI -themes=porno -site=blog.naintia.com  -cssthemes=hugoscroll
@@ -117,7 +117,71 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naintia.org
 bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naintia.org
 
 
+#naisia.org
+#bin/newsite -locale=fi_FI -themes=porno -site=naisia.org -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naisia.org -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naisia.org  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naisia.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naisia.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naisia.org
+
+hugo -s www/fi_FI/porno/naisia.org
+hugo -s www/fi_FI/porno/www.naisia.org
+hugo -s www/fi_FI/porno/blog.naisia.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naisia.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naisia.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naisia.org
 
 
+#naisia.co
+#bin/newsite -locale=fi_FI -themes=porno -site=naisia.co -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naisia.co -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naisia.co  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naisia.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naisia.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naisia.co
+
+hugo -s www/fi_FI/porno/naisia.co
+hugo -s www/fi_FI/porno/www.naisia.co
+hugo -s www/fi_FI/porno/blog.naisia.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naisia.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naisia.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naisia.co
+
+
+#naisia.info
+#bin/newsite -locale=fi_FI -themes=porno -site=naisia.info -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naisia.info -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naisia.info  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naisia.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naisia.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naisia.info
+
+hugo -s www/fi_FI/porno/naisia.info
+hugo -s www/fi_FI/porno/www.naisia.info
+hugo -s www/fi_FI/porno/blog.naisia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naisia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naisia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naisia.info
+
+
+#naisia.mobi
+#bin/newsite -locale=fi_FI -themes=porno -site=naisia.mobi -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naisia.mobi -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naisia.mobi  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naisia.mobi
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naisia.mobi
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naisia.mobi
+
+hugo -s www/fi_FI/porno/naisia.mobi
+hugo -s www/fi_FI/porno/www.naisia.mobi
+hugo -s www/fi_FI/porno/blog.naisia.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naisia.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naisia.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naisia.mobi
 
 

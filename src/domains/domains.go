@@ -65,6 +65,6 @@ type Frontmatter struct {
 	Descriptions []string `toml:"descriptions"`
 	Slug         string   `toml:"slug"`
 	Sentences    []string `toml:"sentences"`
-	Weight       int64    `toml:"weight"`
+//	Weight       int64    `toml:"weight"`
 //	Class        string   `toml:"class"`
 }

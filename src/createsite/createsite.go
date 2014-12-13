@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-func CreateNewSite(golog syslog.Writer, locale string, themes string, site string, cssthemes string, paragraphs []domains.Paragraph) {
+func CreateNewSite(golog syslog.Writer, locale string, themes string, site string, cssthemes string, paragraphs []domains.Paragraph,keywords []string) {
 
 	rootdirectory := "/home/juno/git/prodhugostatic/www/" + locale + "/" + themes + "/" + site
 
@@ -132,7 +132,7 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 			panic(err)
 		}
 		
-		createpages.CreateSomePages(golog, rootdirectory, paragraphs)
+		createpages.CreateSomePages(golog, rootdirectory, paragraphs,keywords)
 
 		if _, err := os.Stat(rootdirectory + "/themes"); os.IsNotExist(err) {
 

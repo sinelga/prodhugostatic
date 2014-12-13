@@ -1,18 +1,18 @@
 package main
 
 import (
-	//	"bytes"
 	"domains"
 	//	"encoding/json"
 	"findfreeparagraph"
 	"flag"
-	//	"fmt"
 	"io/ioutil"
 	"log/syslog"
 	//	"os"
 	"pager"
 	"strings"
 	"time"
+	"somekeywords"
+	"findkeywords"
 )
 
 var startparameters []string
@@ -40,6 +40,8 @@ func main() {
 	site := *siteFlag
 
 	rootdirectory := "/home/juno/git/prodhugostatic/www/" + locale + "/" + themes + "/" + site
+	
+	
 
 	content, err := ioutil.ReadFile("/home/juno/git/prodhugostatic/config.txt")
 	if err != nil {
@@ -52,6 +54,7 @@ func main() {
 	startparameters = []string{strings.TrimSpace(parameters[0]), strings.TrimSpace(parameters[1]), strings.TrimSpace(parameters[2])}
 
 	paragraph = findfreeparagraph.FindFromQ(*golog, locale, themes, "google", startparameters)
+	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
 
 	pubdate = time.Now().Local().Format(time.RFC3339)
 
@@ -61,12 +64,15 @@ func main() {
 		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
 	}
 
-	categories = []string{
-		paragraph.Phost,
-		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[0]),
-		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
-	}
-
+//	categories = []string{
+//		paragraph.Phost,
+//		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[0]),
+//		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
+//	}
+	categories = somekeywords.GetSome(*golog,keywords,10)
+	
+//	pubdateint64 := time.Now().Local().Unix()
+	
 	frontmatter := domains.Frontmatter{
 
 		Title:       paragraph.Ptitle + ".",
@@ -76,6 +82,7 @@ func main() {
 		Categories:  categories,
 		Slug:        tags[1] + "-" + tags[2],
 		Sentences:   paragraph.Sentences,
+//		Weight:       pubdateint64,
 	}
 
 	pager.CreatePage(*golog, rootdirectory+"/content/post/"+strings.Replace(paragraph.Ptitle, " ", "-", 1)+".md", frontmatter)
