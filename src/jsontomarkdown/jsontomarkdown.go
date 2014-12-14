@@ -12,7 +12,9 @@ import (
 	"strings"
 	"time"
 	"somekeywords"
-	"findkeywords"
+	"somephrases"
+	"keywords_and_phrases"
+//	"findkeywords"
 )
 
 var startparameters []string
@@ -34,6 +36,7 @@ func main() {
 	var pubdate string
 	var tags []string
 	var categories []string
+	var topics []string
 
 	locale := *localeFlag
 	themes := *themesFlag
@@ -54,7 +57,9 @@ func main() {
 	startparameters = []string{strings.TrimSpace(parameters[0]), strings.TrimSpace(parameters[1]), strings.TrimSpace(parameters[2])}
 
 	paragraph = findfreeparagraph.FindFromQ(*golog, locale, themes, "google", startparameters)
-	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
+//	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
+	
+	keywords,phrases :=keywords_and_phrases.GetAll(*golog,locale, themes,startparameters)
 
 	pubdate = time.Now().Local().Format(time.RFC3339)
 
@@ -64,14 +69,9 @@ func main() {
 		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
 	}
 
-//	categories = []string{
-//		paragraph.Phost,
-//		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[0]),
-//		strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
-//	}
 	categories = somekeywords.GetSome(*golog,keywords,10)
-	
-//	pubdateint64 := time.Now().Local().Unix()
+	topics = somephrases.GetSome(*golog,phrases,2)
+
 	
 	frontmatter := domains.Frontmatter{
 
@@ -82,6 +82,7 @@ func main() {
 		Categories:  categories,
 		Slug:        tags[1] + "-" + tags[2],
 		Sentences:   paragraph.Sentences,
+		Topics: topics,
 //		Weight:       pubdateint64,
 	}
 

@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-func CreateNewSite(golog syslog.Writer, locale string, themes string, site string, cssthemes string, paragraphs []domains.Paragraph,keywords []string) {
+func CreateNewSite(golog syslog.Writer, locale string, themes string, site string, cssthemes string, paragraphs []domains.Paragraph, keywords []string,phrases  []string) {
 
 	rootdirectory := "/home/juno/git/prodhugostatic/www/" + locale + "/" + themes + "/" + site
 
@@ -57,20 +57,20 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 			Cssthemes:   cssthemes,
 			Description: description,
 			Keywords:    keywords,
-			Cover: "/images/background-cover.jpg",
-			Logojpg: "/images/logo.jpg",
-			Logopng: "/images/logo.png",
+			Cover:       "/images/background-cover.jpg",
+			Logojpg:     "/images/logo.jpg",
+			Logopng:     "/images/logo.png",
 		}
 
 		indexeshugo := domains.Indexeshugo{
 			Category:    "categories",
 			Tag:         "tags",
 			Description: "descriptions",
+			Topic:       "topics",
 		}
 
 		permalinkshugo := domains.Permalinkshugo{
 			Post: "/:slug/",
-			
 		}
 
 		menuarr := []domains.Menuparshugo{
@@ -117,22 +117,22 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 		if _, err = file.Write(buffer.Bytes()); err != nil {
 			panic(err)
 		}
-		
+
 		buffer.Reset()
-		
+
 		filerobots, err := os.OpenFile(rootdirectory+"/robots.txt", os.O_RDWR|os.O_CREATE, 0660)
-				if err != nil {
+		if err != nil {
 			panic(err)
 		}
 		defer filerobots.Close()
-		
-		buffer.WriteString("User-agent: *\nAllow: /\nSitemap: http://"+site+"/sitemap.xml")
-		
+
+		buffer.WriteString("User-agent: *\nAllow: /\nSitemap: http://" + site + "/sitemap.xml")
+
 		if _, err = filerobots.Write(buffer.Bytes()); err != nil {
 			panic(err)
 		}
-		
-		createpages.CreateSomePages(golog, rootdirectory, paragraphs,keywords)
+
+		createpages.CreateSomePages(golog, rootdirectory, paragraphs, keywords,phrases)
 
 		if _, err := os.Stat(rootdirectory + "/themes"); os.IsNotExist(err) {
 
@@ -163,8 +163,6 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 
 		}
 		fmt.Printf(" %q\n", out.String())
-		
-				
 
 	} else {
 

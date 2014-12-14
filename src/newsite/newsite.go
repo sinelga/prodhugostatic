@@ -9,7 +9,8 @@ import (
 	"log/syslog"
 	"strings"
 	"createsite"
-	"findkeywords"
+//	"findkeywords"
+	"keywords_and_phrases"
 )
 
 
@@ -47,9 +48,10 @@ func main() {
 
 	}
 	
-	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
+//	keywords :=findkeywords.GetAll(*golog,locale, themes,startparameters)
+	keywords,phrases :=keywords_and_phrases.GetAll(*golog,locale, themes,startparameters)
 	
 	
-	createsite.CreateNewSite(*golog,locale,themes,site,cssthemes,paragraphs,keywords)
+	createsite.CreateNewSite(*golog,locale,themes,site,cssthemes,paragraphs,keywords,phrases)
 			
 }

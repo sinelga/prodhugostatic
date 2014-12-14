@@ -30,8 +30,8 @@ type Paramshugo struct {
 	Description []string `toml:"description"`
 	Keywords    []string `toml:"keywords"`
 	Cover       string   `toml:"cover"`
-	Logojpg        string   `toml:"logojpg"`
-	Logopng		 string   `toml:"logopng"`
+	Logojpg     string   `toml:"logojpg"`
+	Logopng     string   `toml:"logopng"`
 }
 
 type Permalinkshugo struct {
@@ -42,6 +42,7 @@ type Indexeshugo struct {
 	Category    string `toml:"category"`
 	Tag         string `toml:"tag"`
 	Description string `toml:"description"`
+	Topic       string `toml:"topic"`
 }
 
 type Confighugo struct {
@@ -65,6 +66,7 @@ type Frontmatter struct {
 	Descriptions []string `toml:"descriptions"`
 	Slug         string   `toml:"slug"`
 	Sentences    []string `toml:"sentences"`
-//	Weight       int64    `toml:"weight"`
-//	Class        string   `toml:"class"`
+	Topics       []string `toml:"topics"`
+	//	Weight       int64    `toml:"weight"`
+	//	Class        string   `toml:"class"`
 }

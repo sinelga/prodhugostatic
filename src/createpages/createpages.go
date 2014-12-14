@@ -7,14 +7,16 @@ import (
 	"strings"
 	"time"
 	"somekeywords"
+	"somephrases"
 )
 
-func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []domains.Paragraph,keywords []string) {
+func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []domains.Paragraph,keywords []string,phrases []string) {
 
 	var d time.Time
 	var pubdate string
 	var tags []string
 	var categories []string
+	var topics []string
 
 	d = time.Now()
 
@@ -23,6 +25,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 	pubdate = time.Date(d.Year(), d.Month(), d.Day()-30, 0, 0, 0, 0, time.UTC).Local().Format(time.RFC3339)
 	
 	categories = somekeywords.GetSome(golog,keywords,5)
+	topics = somephrases.GetSome(golog,phrases,2)
 
 	frontmatter := domains.Frontmatter{
 
@@ -32,14 +35,17 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 		Tags:         []string{"about", "Noin"},
 		Categories:   categories,
 		Descriptions: []string{paragraphs[0].Pphrase},
+		Topics: topics,
 		Slug:         "about",
 		Sentences:    paragraphs[0].Sentences,
+		
 	}
 
 	pager.CreatePage(golog, rootdirectory+"/content/about.md", frontmatter)
 
 	// alltags
 	categories = somekeywords.GetSome(golog,keywords,5)
+	topics = somephrases.GetSome(golog,phrases,2)
 
 	frontmatter = domains.Frontmatter{
 
@@ -49,6 +55,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 		Tags:         []string{"tag", "tags", "index"},
 		Categories:   categories,
 		Descriptions: []string{"All tags Index"},
+		Topics: topics,
 		Slug:         "alltags",
 		Sentences:    []string{"All tags Index"},
 	}
@@ -57,6 +64,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 
 	//	allcategories
 	categories = somekeywords.GetSome(golog,keywords,5)
+	topics = somephrases.GetSome(golog,phrases,2)
 
 	frontmatter = domains.Frontmatter{
 
@@ -66,6 +74,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 		Tags:         []string{"categories", "index"},
 		Categories:   categories,
 		Descriptions: []string{"All categories Index"},
+		Topics: topics,
 		Slug:         "allcategories",
 		Sentences:    []string{"All categories Index"},
 	}
@@ -74,6 +83,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 
 	//	allcategories
 	categories = somekeywords.GetSome(golog,keywords,5)
+	topics = somephrases.GetSome(golog,phrases,2)
 
 	frontmatter = domains.Frontmatter{
 
@@ -83,6 +93,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 		Tags:         []string{"descriptions", "index"},
 		Categories:   categories,
 		Descriptions: []string{"All descriptions Index"},
+		Topics: topics,
 		Slug:         "alldescriptions",
 		Sentences:    []string{"All descriptions Index"},
 	}
@@ -93,21 +104,15 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 
 		pubdate = time.Date(d.Year(), d.Month(), d.Day()-i, 0, 0, 0, 0, time.UTC).Local().Format(time.RFC3339)
 
-//		pubdateint64 := d.Unix() - int64(i)
-
 		tags = []string{
 			paragraph.Phost,
 			strings.ToLower(strings.Split(paragraph.Ptitle, " ")[0]),
 			strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
 		}
 
-//		categories = []string{
-//			paragraph.Phost,
-//			strings.ToLower(strings.Split(paragraph.Ptitle, " ")[0]),
-//			strings.ToLower(strings.Split(paragraph.Ptitle, " ")[1]),
-//		}
 
 		categories = somekeywords.GetSome(golog,keywords,10)
+		topics = somephrases.GetSome(golog,phrases,2)
 
 
 
@@ -119,6 +124,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 			Tags:         tags,
 			Categories:   categories,
 			Descriptions: []string{strings.Replace(paragraph.Pphrase, ".", "", 1)},
+			Topics: topics,
 			Slug:         tags[1] + "-" + tags[2],
 			Sentences:    paragraph.Sentences,
 //			Weight:       pubdateint64,
