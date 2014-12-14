@@ -185,3 +185,74 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naisia.mobi
 bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naisia.mobi
 
 
+#naista.org
+#bin/newsite -locale=fi_FI -themes=porno -site=naista.org -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naista.org -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naista.org  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naista.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naista.org
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naista.org
+
+hugo -s www/fi_FI/porno/naista.org
+hugo -s www/fi_FI/porno/www.naista.org
+hugo -s www/fi_FI/porno/blog.naista.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naista.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naista.org
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naista.org
+
+
+
+#naista.co
+#bin/newsite -locale=fi_FI -themes=porno -site=naista.co -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naista.co -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naista.co  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naista.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naista.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naista.co
+
+hugo -s www/fi_FI/porno/naista.co
+hugo -s www/fi_FI/porno/www.naista.co
+hugo -s www/fi_FI/porno/blog.naista.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naista.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naista.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naista.co
+
+
+#naista.info
+#bin/newsite -locale=fi_FI -themes=porno -site=naista.info -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naista.info -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naista.info  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naista.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naista.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naista.info
+
+hugo -s www/fi_FI/porno/naista.info
+hugo -s www/fi_FI/porno/www.naista.info
+hugo -s www/fi_FI/porno/blog.naista.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naista.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naista.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naista.info
+
+
+#naista.mobi
+#bin/newsite -locale=fi_FI -themes=porno -site=naista.mobi -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=www.naista.mobi -cssthemes=sshq
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.naista.mobi  -cssthemes=sshq
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=naista.mobi
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.naista.mobi
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.naista.mobi
+
+hugo -s www/fi_FI/porno/naista.mobi
+hugo -s www/fi_FI/porno/www.naista.mobi
+hugo -s www/fi_FI/porno/blog.naista.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=naista.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.naista.mobi
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.naista.mobi
+
+
+
+
