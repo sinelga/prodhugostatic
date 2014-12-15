@@ -16,7 +16,9 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 	var pubdate string
 	var tags []string
 	var categories []string
+	var descriptions []string
 	var topics []string
+	
 
 	d = time.Now()
 
@@ -25,7 +27,9 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 	pubdate = time.Date(d.Year(), d.Month(), d.Day()-30, 0, 0, 0, 0, time.UTC).Local().Format(time.RFC3339)
 	
 	categories = somekeywords.GetSome(golog,keywords,5)
+	
 	topics = somephrases.GetSome(golog,phrases,2)
+	descriptions = somephrases.GetSome(golog,phrases,1) 
 
 	frontmatter := domains.Frontmatter{
 
@@ -34,7 +38,8 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 		Date:         pubdate,
 		Tags:         []string{"about", "Noin"},
 		Categories:   categories,
-		Descriptions: []string{paragraphs[0].Pphrase},
+//		Descriptions: []string{append(descriptions, paragraphs[0].Pphrase)},
+		Descriptions: append(descriptions, strings.Replace(paragraphs[0].Pphrase, ".", "", 1)),
 		Topics: topics,
 		Slug:         "about",
 		Sentences:    paragraphs[0].Sentences,
@@ -113,8 +118,7 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 
 		categories = somekeywords.GetSome(golog,keywords,10)
 		topics = somephrases.GetSome(golog,phrases,2)
-
-
+		descriptions = somephrases.GetSome(golog,phrases,1)		
 
 		frontmatter := domains.Frontmatter{
 
@@ -123,7 +127,8 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 			Date:         pubdate,
 			Tags:         tags,
 			Categories:   categories,
-			Descriptions: []string{strings.Replace(paragraph.Pphrase, ".", "", 1)},
+//			Descriptions: []string{strings.Replace(paragraph.Pphrase, ".", "", 1)},
+			Descriptions: append(descriptions,strings.Replace(paragraph.Pphrase, ".", "", 1)),
 			Topics: topics,
 			Slug:         tags[1] + "-" + tags[2],
 			Sentences:    paragraph.Sentences,
