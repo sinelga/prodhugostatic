@@ -49,61 +49,61 @@ func CreateSomePages(golog syslog.Writer, rootdirectory string, paragraphs []dom
 	pager.CreatePage(golog, rootdirectory+"/content/about.md", frontmatter)
 
 	// alltags
-	categories = somekeywords.GetSome(golog,keywords,5)
-	topics = somephrases.GetSome(golog,phrases,2)
-
-	frontmatter = domains.Frontmatter{
-
-		Title:        "All tags",
-		Description:  "All tags Index",
-		Date:         pubdate,
-		Tags:         []string{"tag", "tags", "index"},
-		Categories:   categories,
-		Descriptions: []string{"All tags Index"},
-		Topics: topics,
-		Slug:         "alltags",
-		Sentences:    []string{"All tags Index"},
-	}
-
-	pager.CreatePage(golog, rootdirectory+"/content/alltags.md", frontmatter)
-
-	//	allcategories
-	categories = somekeywords.GetSome(golog,keywords,5)
-	topics = somephrases.GetSome(golog,phrases,2)
-
-	frontmatter = domains.Frontmatter{
-
-		Title:        "All categories",
-		Description:  "All categories Index",
-		Date:         pubdate,
-		Tags:         []string{"categories", "index"},
-		Categories:   categories,
-		Descriptions: []string{"All categories Index"},
-		Topics: topics,
-		Slug:         "allcategories",
-		Sentences:    []string{"All categories Index"},
-	}
-
-	pager.CreatePage(golog, rootdirectory+"/content/allcategories.md", frontmatter)
+//	categories = somekeywords.GetSome(golog,keywords,5)
+//	topics = somephrases.GetSome(golog,phrases,2)
+//
+//	frontmatter = domains.Frontmatter{
+//
+//		Title:        "All tags",
+//		Description:  "All tags Index",
+//		Date:         pubdate,
+//		Tags:         []string{"tag", "tags", "index"},
+//		Categories:   categories,
+//		Descriptions: []string{"All tags Index"},
+//		Topics: topics,
+//		Slug:         "alltags",
+//		Sentences:    []string{"All tags Index"},
+//	}
+//
+//	pager.CreatePage(golog, rootdirectory+"/content/alltags.md", frontmatter)
 
 	//	allcategories
-	categories = somekeywords.GetSome(golog,keywords,5)
-	topics = somephrases.GetSome(golog,phrases,2)
-
-	frontmatter = domains.Frontmatter{
-
-		Title:        "All descriptions",
-		Description:  "All descriptions Index",
-		Date:         pubdate,
-		Tags:         []string{"descriptions", "index"},
-		Categories:   categories,
-		Descriptions: []string{"All descriptions Index"},
-		Topics: topics,
-		Slug:         "alldescriptions",
-		Sentences:    []string{"All descriptions Index"},
-	}
-
-	pager.CreatePage(golog, rootdirectory+"/content/alldescriptions.md", frontmatter)
+//	categories = somekeywords.GetSome(golog,keywords,5)
+//	topics = somephrases.GetSome(golog,phrases,2)
+//
+//	frontmatter = domains.Frontmatter{
+//
+//		Title:        "All categories",
+//		Description:  "All categories Index",
+//		Date:         pubdate,
+//		Tags:         []string{"categories", "index"},
+//		Categories:   categories,
+//		Descriptions: []string{"All categories Index"},
+//		Topics: topics,
+//		Slug:         "allcategories",
+//		Sentences:    []string{"All categories Index"},
+//	}
+//
+//	pager.CreatePage(golog, rootdirectory+"/content/allcategories.md", frontmatter)
+//
+//	//	allcategories
+//	categories = somekeywords.GetSome(golog,keywords,5)
+//	topics = somephrases.GetSome(golog,phrases,2)
+//
+//	frontmatter = domains.Frontmatter{
+//
+//		Title:        "All descriptions",
+//		Description:  "All descriptions Index",
+//		Date:         pubdate,
+//		Tags:         []string{"descriptions", "index"},
+//		Categories:   categories,
+//		Descriptions: []string{"All descriptions Index"},
+//		Topics: topics,
+//		Slug:         "alldescriptions",
+//		Sentences:    []string{"All descriptions Index"},
+//	}
+//
+//	pager.CreatePage(golog, rootdirectory+"/content/alldescriptions.md", frontmatter)
 
 	for i, paragraph := range paragraphs {
 
