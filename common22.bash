@@ -115,10 +115,10 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=kulli.biz
 bin/sitemapsping -locale=fi_FI -themes=porno -site=www.kulli.biz
 bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.kulli.biz
 
-#kulli.biz
-#bin/newsite -locale=fi_FI -themes=porno -site=kulli.biz -cssthemes=kr_flat_ui
-#bin/newsite -locale=fi_FI -themes=porno -site=www.kulli.biz -cssthemes=kr_flat_ui
-#bin/newsite -locale=fi_FI -themes=porno -site=blog.kulli.biz  -cssthemes=kr_flat_ui
+#kulli.co
+#bin/newsite -locale=fi_FI -themes=porno -site=kulli.co -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=www.kulli.co -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.kulli.co  -cssthemes=kr_flat_ui
 
 bin/jsontomarkdown -locale=fi_FI -themes=porno -site=kulli.biz
 bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.kulli.biz
