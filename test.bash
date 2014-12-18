@@ -24,8 +24,9 @@ rm -rf www/fi_FI/porno/www.test.com
 #bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=simple-a
 #bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=hugoscroll
 #bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=sshq
-bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=stou-dk-theme
+#bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=stou-dk-theme
 #bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=kr_foundation
+bin/newsite -locale=fi_FI -themes=porno -site=www.test.com -cssthemes=kr_flat_ui
 
 
 

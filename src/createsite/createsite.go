@@ -75,13 +75,14 @@ func CreateNewSite(golog syslog.Writer, locale string, themes string, site strin
 
 		menuarr := []domains.Menuparshugo{
 
-			domains.Menuparshugo{Name: "About", Url: "/about/", Weight: -100, Identifier: "about"},
-			domains.Menuparshugo{Name: "Posts", Url: "/post/", Weight: -105, Identifier: "posts"},
+			domains.Menuparshugo{Name: "Noin", Url: "/about/", Weight: -100, Identifier: "about"},
+			domains.Menuparshugo{Name: "Arkisto", Url: "/post/", Weight: -105, Identifier: "post"},
 			domains.Menuparshugo{Name: "Etusivu", Url: "/", Weight: -106, Identifier: "homepage"},
 			//			domains.Menuparshugo {Name: "Rss",Url: "/rss.xml",Weight: -101,Identifier:"rss"},
-			domains.Menuparshugo{Name: "All categories", Url: "/allcategories/", Weight: -102, Identifier: "allcategories"},
-			domains.Menuparshugo{Name: "All descriptions", Url: "/alldescriptions/", Weight: -103, Identifier: "alldescriptions"},
-			domains.Menuparshugo{Name: "All tags", Url: "/alltags/", Weight: -104, Identifier: "alltags"},
+			domains.Menuparshugo{Name: "Luokat", Url: "/categories/", Weight: -102, Identifier: "categories"},
+			domains.Menuparshugo{Name: "Kuvaukset", Url: "/descriptions/", Weight: -103, Identifier: "descriptions"},
+			domains.Menuparshugo{Name: "Tagit", Url: "/tags/", Weight: -104, Identifier: "tags"},
+			domains.Menuparshugo{Name: "Aiheista", Url: "/topics/", Weight: -104, Identifier: "topics"},
 		}
 
 		confmenu := domains.Menuhugo{
