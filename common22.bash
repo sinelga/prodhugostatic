@@ -120,14 +120,54 @@ bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.kulli.biz
 #bin/newsite -locale=fi_FI -themes=porno -site=www.kulli.co -cssthemes=kr_flat_ui
 #bin/newsite -locale=fi_FI -themes=porno -site=blog.kulli.co  -cssthemes=kr_flat_ui
 
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=kulli.biz
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.kulli.biz
-bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.kulli.biz
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=kulli.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.kulli.co
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.kulli.co
 
-hugo -s www/fi_FI/porno/kulli.biz
-hugo -s www/fi_FI/porno/www.kulli.biz
+hugo -s www/fi_FI/porno/kulli.co
+hugo -s www/fi_FI/porno/www.kulli.co
 hugo -s www/fi_FI/porno/blog.kulli.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=kulli.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=www.kulli.biz
-bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.kulli.biz
+bin/sitemapsping -locale=fi_FI -themes=porno -site=kulli.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.kulli.co
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.kulli.co
+
+
+
+#panokuvia.net
+#bin/newsite -locale=fi_FI -themes=porno -site=panokuvia.net -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=www.panokuvia.net -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.panokuvia.net  -cssthemes=kr_flat_ui
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=panokuvia.net
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.panokuvia.net
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.panokuvia.net
+
+hugo -s www/fi_FI/porno/panokuvia.net
+hugo -s www/fi_FI/porno/www.panokuvia.net
+hugo -s www/fi_FI/porno/blog.panokuvia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=panokuvia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.panokuvia.net
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.panokuvia.net
+
+
+#panokuvia.info
+#bin/newsite -locale=fi_FI -themes=porno -site=panokuvia.info -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=www.panokuvia.info -cssthemes=kr_flat_ui
+#bin/newsite -locale=fi_FI -themes=porno -site=blog.panokuvia.info  -cssthemes=kr_flat_ui
+
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=panokuvia.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=www.panokuvia.info
+bin/jsontomarkdown -locale=fi_FI -themes=porno -site=blog.panokuvia.info
+
+hugo -s www/fi_FI/porno/panokuvia.info
+hugo -s www/fi_FI/porno/www.panokuvia.info
+hugo -s www/fi_FI/porno/blog.panokuvia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=panokuvia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=www.panokuvia.info
+bin/sitemapsping -locale=fi_FI -themes=porno -site=blog.panokuvia.info
+
+
+
+
+
 
