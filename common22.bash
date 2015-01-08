@@ -1,3 +1,9 @@
+#!/bin/bash
+
+
+cd /home/juno/git/prodhugostatic
+
+
 #suomiporno.xyz
 #bin/newsite -locale=fi_FI -themes=porno -site=suomiporno.xyz -cssthemes=stou-dk-theme
 #bin/newsite -locale=fi_FI -themes=porno -site=www.suomiporno.xyz -cssthemes=stou-dk-theme
