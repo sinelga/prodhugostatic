@@ -1,6 +1,6 @@
 +++
 title = "070094413 Miia Helsinki"
-description = "Xl puhelinseksi."
+description = "Puhelinseksi."
 date = "2015-02-10T02:00:00+02:00"
 tags = ["alaston", "anoppi", "pillunkuvia"]
 categories = ["anoppi", "nuolla", "paljaalle", "live", "nussin", "pillunkuvia", "perse"]
