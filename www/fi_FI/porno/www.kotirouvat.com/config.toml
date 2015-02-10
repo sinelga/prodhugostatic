@@ -1,7 +1,7 @@
 languageCode = "fi_FI"
 baseurl = "http://www.kotirouvat.com"
 canonifyurls = true
-title = "Anoppi pillunkuvia"
+title = "Kotirouvat"
 theme = "sshq"
 
 [indexes]
