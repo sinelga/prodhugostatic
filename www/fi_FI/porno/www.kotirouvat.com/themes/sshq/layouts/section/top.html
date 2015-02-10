@@ -12,7 +12,7 @@
         <header>
           <h1 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h1>
           <p class="meta">
-            <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time>
+            <!-- <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time> -->
             &bull;
             <a rel="bookmark" href="{{.Permalink}}">Permalink</a>
           </p>
@@ -21,7 +21,7 @@
           {{.Summary}}
         </div>
         <footer>
-          <a rel="full-article" href="{{.Permalink}}">Read on &rarr;</a>
+          <a rel="full-article" href="{{.Permalink}}">Lue &rarr;</a>
         </footer>
       </article>
 {{ end }}

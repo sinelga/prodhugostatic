@@ -16,13 +16,19 @@ theme = "sshq"
 [params]
   locale = "fi_FI"
   themes = "porno"
-  site = "www.kotirouvat.com"
+  site = "www.kotirouvat.com" 
   cssthemes = "sshq"
   description = ["Xl puhelinseksi.", "Naiset pissalla video.", "Naisista nakukuvia.", "Pikku teini pillu.", "Jätti kyrvät nussii rajusti."]
   keywords = ["anoppi", "pillunkuvia", "tissien", "nussin", "panettaa", "paljaalle", "live", "perse", "kullit", "nuolla"]
   cover = "/images/background-cover.jpg"
   logojpg = "/images/logo.jpg"
-  logopng = "/images/logo.png"
+  logopng = "/images/logo.png"  
+
+
+[Params.copyright]
+	year = "2015"
+	owner = "Krasava OY"
+  
 
 [menu]
 

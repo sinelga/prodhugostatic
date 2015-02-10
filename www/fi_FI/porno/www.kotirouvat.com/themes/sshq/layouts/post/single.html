@@ -9,7 +9,7 @@
 				<header>
 			        <h1 class="entry-title">{{.Title}}</h1>
 					<p class="meta">
-						<time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time>
+						<!-- <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time> -->
 					</p>
 				</header>
 				<div class="entry-content">
@@ -20,7 +20,7 @@
 {{ with .Site.Author.name }}
 						<span class="byline author vcard">Posted by <span class="fn">{{ . }}</span></span>
 {{ end }}
-						<time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time>
+						<!-- <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time> -->
 					</p>
 
 <!-- 					
