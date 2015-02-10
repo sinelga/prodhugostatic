@@ -1,0 +1,14 @@
+{{ "<!-- hugo: enter themes/sshq/partials/banner.html -->" | safeHtml }}
+<header role="banner">
+  <hgroup>
+    <h1><a href="/">{{ .Site.Title }}</a></h1>
+{{ if isset .Site.Params "theme" }}
+  {{ with .Site.Params.theme }}
+    {{ if isset . "slogan" }}
+      <h2>{{ .slogan }}</h2>
+    {{ end }}
+  {{ end }}
+{{ end }}
+  </hgroup>
+</header>
+{{ "<!-- hugo: leave themes/sshq/partials/banner.html -->" | safeHtml }}

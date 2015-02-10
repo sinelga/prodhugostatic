@@ -1,0 +1,15 @@
+{{ "<!-- hugo: enter themes/sshq/partials/disqus/recent.html -->" | safeHtml }}
+{{ with .Site.Params }}
+  {{ if and (isset . "disqus") (isset .disqus "shortname") }}
+    {{ $shortname := .disqus.shortname }}
+    {{ with .theme.disqus_recent }}
+      <section>
+        <h1>Recent Comments</h1>
+        <div id="dsq-recentcomments" class="dsq-widget">
+          <script type="text/javascript" src="http://disqus.com/forums/{{ $shortname }}/recent_comments_widget.js?hide_avatars=1&num_items=4&excerpt_length=56"></script>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ "<!-- hugo: leave themes/sshq/partials/disqus/recent.html -->" | safeHtml }}

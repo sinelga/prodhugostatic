@@ -1,0 +1,36 @@
+{{ partial "head.html" . }}
+{{ "<!-- hugo: enter themes/sshq/section/post.html -->" | safeHtml }}
+<body class="no-sidebar">
+{{ partial "banner.html" . }}
+{{ partial "navbar.html" . }}
+<div id="main">
+  <div id="content">
+
+  	<div>
+{{ range .Data.Pages.ByDate.Reverse }}
+      <article>
+        <header>
+          <h1 class="entry-title"><a href="{{.Permalink}}">{{.Title}}</a></h1>
+          <p class="meta">
+            <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}" pubdate data-updated="true">{{ .Date.Format "January 2, 2006" }}</time>
+            &bull;
+            <a rel="bookmark" href="{{.Permalink}}">Permalink</a>
+          </p>
+        </header>
+        <div class="entry-content">
+          {{.Summary}}
+        </div>
+        <footer>
+          <a rel="full-article" href="{{.Permalink}}">Read on &rarr;</a>
+        </footer>
+      </article>
+{{ end }}
+    </div>
+  </div>
+</div>
+
+{{partial "footer.html" .}}
+
+{{ "<!-- hugo: leave themes/sshq/section/post.html -->" | safeHtml }}
+</body>
+</html>

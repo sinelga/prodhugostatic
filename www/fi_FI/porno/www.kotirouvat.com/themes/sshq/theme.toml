@@ -1,0 +1,17 @@
+name = "sshq"
+license = "MIT"
+licenselink = "https://github.com/quoha/sshq/blob/master/LICENSE.md"
+description = "A clone of the Octopress 2.0 theme"
+homepage = "http://github.io/quoha/sshq/"
+tags = ["hugo", "blog", "theme"]
+features = ["blog"]
+
+[author]
+    name = "quoha"
+    homepage = "http://mdhender.com"
+
+# If Porting existing theme
+[original]
+    author =  "Brandon Mathis"
+    homepage = "http://octopress.org"
+    repo = "https://github.com/imathis/octopress"

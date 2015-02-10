@@ -1,0 +1,66 @@
+#############################################################################
+# search for "@@" to find settings that you must change to customize your
+# site. you will also need to update the theme parameters.
+#
+# there are some values that you can set in your front matter. doing so will
+# override the theme's defaults.
+#
+#  disallow_comments = "true" to not display comments for a post
+#
+# logo: the site logo is in static/images/logo.png. you should replace it
+#       with a 227x227 PNG image with transparent background and resolution
+#       of 72dpi.
+#
+#############################################################################
+# @@ update baseurl for your production site and languageCode if needed
+baseurl      = "http://localhost:1313"
+languageCode = "en-us"
+title        = "@@Your Site Title"
+theme        = "sshq"
+
+#############################################################################
+#
+[author]
+	name = "@@Your Name"
+
+#############################################################################
+#
+[permalinks]
+	post = "/post/:year/:month/:day/:slug/"
+	top  = "/:filename/"
+
+#############################################################################
+#
+[Params.copyright]
+	year = "@@Year"
+	owner = "@@Your Name"
+
+#############################################################################
+# @@ update this theme's parameters.
+#    comment out the true/false variables. the theme doesn't actually test
+#    for "true" or "false", it just checks if the variable is defined.
+#
+#    note: "ga" stands for "google analytics"
+#
+[Params.theme]
+	slogan              = "@@Your Site Slogan"
+	disqus_recent       = "true"
+	footer_powered_by   = "true"
+	footer_designed_by  = "true"
+	ga_tracking         = "true"
+	twitter_follow      = "true"
+	twitter_recent      = "true"
+
+[Params.disqus]
+	# @@ comment out shortname if you don't wish to use disqus
+	shortname      = "@@Your Disqus Short Name"
+
+[Params.google]
+	search_site = "@@Your Domain Name"
+
+[Params.google.analytics]
+	account = "@@Your Google Analytics Account Name"
+
+[Params.twitter]
+	account      = "@@Your Twitter Account Name"
+	ut_widget_id = "@@Your Twitter Widget ID"

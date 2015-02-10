@@ -1,0 +1,8 @@
+{{ "<!-- hugo: enter themes/sshq/partials/footer.html -->" | safeHtml }}
+<footer role="contentinfo">
+	<p>Copyright &copy; {{ .Site.Params.copyright.year }} {{ .Site.Params.copyright.owner }}
+	{{ with .Site.Params.theme.footer_powered_by }}&middot; <span class="credit">Powered by <a href="http://gohugo.io">Hugo</a></span>{{ end }}
+	{{ with .Site.Params.theme.footer_designed_by }}&middot; <span class="credit">Template SSHQ v{{ partial "version.html" . }}</scan>{{ end }}
+</p>
+</footer>
+{{ "<!-- hugo: enter themes/sshq/partials/footer.html -->" | safeHtml }}

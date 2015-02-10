@@ -1,0 +1,43 @@
+{{ partial "doctype.html" . }}
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ .Title }}{{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="locale" content="{{ .Site.Params.locale}} ">
+	<meta name="themes" content="{{ .Site.Params.themes}} ">
+	<meta name="site" content="{{ .Site.Params.site}} ">
+	<meta name="keywords" content="{{ range  .Site.Params.keywords }}{{.}},{{ end }}">
+	<meta name="description" content="{{ range  .Site.Params.description }}{{.}} {{ end }}">
+
+  <link rel="canonical" href="{{.Permalink}}">
+
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/jQuery.v1.7.2.min.js" type="text/javascript"></script>
+  <link href="/index.xml" rel="alternate" title="Octopress" type="application/atom+xml">
+  
+  <!--Fonts from Google's Web font directory at http://google.com/webfonts -->
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+
+{{ partial "google/analytics.html" . }}
+{{ partial "twitter/load.html" . }}
+  <link href="/favicon.png" rel="icon">
+
+{{ if isset .Site.Params "google" }}
+  {{ with .Site.Params.google }}
+    {{ if isset . "search_site" }}
+      <script type="text/javascript">
+        function setSearch () {
+          var el = document.getElementsByName('q')[0];
+          el.value = 'site:{{.search_site}} ' + el.value;
+        }
+      </script>
+    {{ end }}
+  {{ end }}
+{{ end }}
+</head>
