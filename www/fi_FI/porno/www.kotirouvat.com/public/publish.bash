@@ -13,6 +13,11 @@ echo "</head><body><pre>"
 date
 echo "\nuname -a"
 uname -a
-echo "\ncpuinfo"
-cat /proc/cpuinfo
+echo "\nPUBLISH "
+#cat /proc/cpuinfo
+cd /home/juno/git/prodhugostatic
+
+/usr/bin/git pull
+/usr/local/bin/hugo -s www/fi_FI/porno/www.kotirouvat.com
+
 echo "</pre></body></html>"
