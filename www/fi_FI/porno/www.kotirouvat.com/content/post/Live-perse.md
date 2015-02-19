@@ -16,6 +16,9 @@ topics = ["hauskat seksiviestit", "farkku pylly kuvia"]
  
 </figure>
 
-Heipähei sinä kiva ja ihana mies!
-Arvostan kumppanissa luotettavuutta, rehellisyyttä ja vastuuntuntoa, jotka kuuluvat myös omiin korkeimpiin arvoihini. Näistä vakavahenkisistä kommenteista huolimatta olen huumorintajuinen ja rento. Luottamus toiseen luo ihmissuhteissa kestävän pohjan, joka mahdollistaa heittäytymisen ja hassuttelun.
-Olen ilmoinen sosiaalinen ja viihdyn vapaa-ajalla kavereiden kanssa ja baarissa tulee myös joskus käytyä. Jos tunnistit itseäsi yhtään niin laitappahan viestiä kuvan kera, niin katsotaan miten tässä käy;)
+
+Hei kaikki urokset!
+35v nainen etsii seuraa ainoastaan seksiin ja muuhun otsikon mukaiseen toimintaan.
+Jos  olet pitkä, urheilullinen, asiallinen ja osaat sekä haluat koskettaa naista, laitathan viestiä.
+
+
