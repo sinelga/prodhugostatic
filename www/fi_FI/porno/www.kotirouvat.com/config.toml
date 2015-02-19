@@ -1,0 +1,69 @@
+languageCode = "fi_FI"
+baseurl = "http://www.kotirouvat.com"
+canonifyurls = true
+title = "Neekerin karvaton"
+theme = "sshq"
+
+[indexes]
+  category = "categories"
+  tag = "tags"
+  description = "descriptions"
+  topic = "topics"
+
+[permalinks]
+  post = "/:slug/"
+
+[params]
+  locale = "fi_FI"
+  themes = "porno"
+  site = "www.kotirouvat.com"
+  cssthemes = "sshq"
+  description = ["Pylly xvideos.", "Thaimaalaisen naisenvaatteet.", "Alastonsuomi etelä-savo.", "Hierontaa oulu sex.", "Finland huorat."]
+  keywords = ["neekerin", "karvaton", "aikuinen", "alastonsuomi", "tissi", "juutube", "abreu", "seksin", "seksipuhelin", "sexivideot"]
+  cover = "/images/background-cover.jpg"
+  logojpg = "/images/logo.jpg"
+  logopng = "/images/logo.png"
+
+[menu]
+
+  [[menu.main]]
+    name = "Noin"
+    url = "/about/"
+    weight = -100
+    identifier = "about"
+
+  [[menu.main]]
+    name = "Arkisto"
+    url = "/post/"
+    weight = -105
+    identifier = "post"
+
+  [[menu.main]]
+    name = "Etusivu"
+    url = "/"
+    weight = -106
+    identifier = "homepage"
+
+  [[menu.main]]
+    name = "Luokat"
+    url = "/categories/"
+    weight = -102
+    identifier = "categories"
+
+  [[menu.main]]
+    name = "Kuvaukset"
+    url = "/descriptions/"
+    weight = -103
+    identifier = "descriptions"
+
+  [[menu.main]]
+    name = "Tagit"
+    url = "/tags/"
+    weight = -104
+    identifier = "tags"
+
+  [[menu.main]]
+    name = "Aiheista"
+    url = "/topics/"
+    weight = -104
+    identifier = "topics"
