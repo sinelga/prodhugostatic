@@ -1,5 +1,5 @@
 +++
-title = "PANOSEURAA"
+title = "Noin"
 description = "Puhelinseksi."
 date = "2015-01-11T02:00:00+02:00"
 tags = ["noin"]
